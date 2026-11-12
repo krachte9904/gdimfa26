@@ -1,0 +1,306 @@
+/* GENERAL STYLES - - - - - - - - */
+
+/* CSS Variables */
+/* To use a variable, type var() and put "--" and the variable name in the parenthesis */
+
+:root{
+	--sand: #ecd4b3;
+	--cloud: #f1ece1;
+	--sky-blue: #b8cfde;
+	--sunset: #f15f3b;
+	--golden-hour: #f1a044;
+	--twilight: #5d3044;
+}
+
+/* Body Font (Basically A Mono) */
+@font-face {
+    font-family: 'my_BasicallyAMono_Medium';
+    src: url('../fonts/BasicallyAMono-Medium.woff2') format('woff2'),
+        url('../fonts/BasicallyAMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+	background-color: var(--cloud);
+}
+
+.container{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1, h2, h3, h4, p{
+	color: var(--twilight);
+}
+
+
+/* H1 - ONLY FOR "COSM" TITLE */
+h1{
+	font-family: "sets-grotesk-l", system-ui, Arial;
+	font-weight: 100;
+	font-style: normal;
+	letter-spacing: 0.025em;
+
+	/* Prevents ability to highlight & hides clipped C */
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Fixes C clip-path on Safari */
+	transform: translateZ(0);
+}
+
+/* COSM C */
+h1 span{
+	/* Clips C to match identity */
+	-webkit-clip-path: polygon(100% 0%, 100% 36%, 70% 36%, 70% 64%, 100% 64%, 100% 100%, 0% 100%, 0% 0%);
+	clip-path: polygon(100% 0%, 100% 36%, 70% 36%, 70% 64%, 100% 64%, 100% 100%, 0% 100%, 0% 0%);
+	letter-spacing: 0;
+}
+
+/* H2 - ONLY FOR "Each of Us, All of Us" TITLE */
+h2{
+	font-family: "sets-grotesk-l", system-ui, Arial;
+	font-weight: 600;
+	font-style: normal;
+}
+
+/* H3 - Sets Grotesk Headings */
+h3{
+	font-family: "sets-grotesk-l", system-ui, Arial;
+	font-weight: 600;
+	font-style: normal;
+}
+
+/* H4 - Basically A Mono Subheadings */
+h4{
+	font-family: 'my_BasicallyAMono_Medium', monospace;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+/* P - Body Text */
+p{
+	font-family: 'my_BasicallyAMono_Medium', monospace;
+	letter-spacing: -0.006em;
+}
+
+h1{
+	line-height: 85%;
+}
+
+h2{
+	line-height: 100%;
+}
+
+h3{
+	line-height: 120%;
+}
+
+h4{
+	line-height: 150%;
+}
+
+p{
+	line-height: 130%;
+}
+
+
+/* Socials - - */
+
+.socials{
+	display: flex;
+	align-self: center;
+}
+
+.socials a{
+	display: block;
+	background-color: var(--sunset);
+	overflow: hidden;
+
+	transition: background-color .5s;
+}
+
+.socials a:hover{
+	background-color: var(--twilight);
+	transition: background-color .25s;
+}
+
+.ig, .fb{
+	position: relative;
+	inset: 0;
+}
+
+.socials svg{
+	position: absolute;
+	fill: var(--cloud);
+}
+
+.ig svg{
+	width: 75%;
+	height: 75%;
+	top: 12.5%;
+	left: 12.5%;
+}
+
+.fb svg{
+	width: 80%;
+	height: 80%;
+	top: 20%;
+	left: 10%;
+}
+
+footer{
+	background-color: var(--twilight);
+}
+
+footer h1, footer h2, footer h3, footer h4, footer p{
+	color: var(--cloud);
+}
+
+/* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 767px){
+	/* MEASUREMENT VARIABLES - MOBILE */
+	:root{
+		--1-column: 17.1875vw;
+		--2-column: 40.625vw;
+		--3-column: 64.0625vw;
+
+		--1-gutter: 6.25vw;
+	}
+
+	.container{
+		width:87.5%; /* 280 pixels at a 320 pixel screen width (iPhone 3 / 4 / 5) */
+	}
+
+	h1{ /* ONLY FOR "COSM" */
+		font-size: 90px;
+	}
+
+	h2{ /* ONLY FOR "EACH OF US, ALL OF US" */
+		font-size: 30px; /* H2 font size is always ~1/3 of H1 font size */
+	}
+
+	h3{ /* Main Headings - Sets Grotesk */
+		font-size: 24px;
+	}
+
+	h4{ /* Subheadings - Basically A Mono */
+		font-size: 16px;
+	}
+
+	p{
+		font-size: 14px;
+	}
+
+	.socials{
+		gap: var(--1-gutter);
+	}
+
+	.socials a{
+		width: min(var(--2-column), 200px);
+		height: 50px;
+		border-radius: calc(var(--1-column)/2);
+	}
+	
+}
+
+/* TABLET STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+	/* MEASUREMENT VARIABLES - TABLET */
+	:root{
+		--1-column: 4.947916666666666vw;
+		--2-column: 13.020833333333333vw;
+		--3-column: 21.09375vw;
+		--4-column: 29.166666666666667vw;
+
+		--1-gutter: 3.125vw;
+	}
+
+	.container{
+		width:93.75%; /* 720 pixels at a 768 pixel screen width (iPads) */
+	}
+
+	h1{ /* ONLY FOR "COSM" */
+		font-size: 100px;
+	}
+
+	h2{ /* ONLY FOR "EACH OF US, ALL OF US" */
+		font-size: 33px; /* H2 font size is always ~1/3 of H1 font size */
+	}
+
+	h3{ /* Main Headings - Sets Grotesk */
+		font-size: 24px;
+	}
+
+	h4{ /* Subheadings - Basically A Mono */
+		font-size: 16px;
+	}
+
+	p{
+		font-size: 14px;
+	}
+
+	.socials{
+		gap: var(--1-gutter);
+	}
+
+	.socials a{
+		width: var(--1-column);
+		height: var(--1-column);
+		border-radius: calc(var(--1-column)/2);
+	}
+
+}
+
+/* DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 1025px){
+	/* MEASUREMENT VARIABLES - DESKTOP */
+	:root{
+		--1-column: 5.2734375vw;
+		--2-column: 13.4765625vw;
+		--3-column: 21.6796875vw;
+		--4-column: 29.8828125vw;
+
+		--7-column: 54.4921875vw;
+
+		--1-gutter: 2.9296875vw;
+	}
+
+	.container{
+		/*width:978px;*/
+		width:95.5%;
+	}
+
+	h1{ /* ONLY FOR "COSM" */
+		font-size: 120px;
+	}
+
+	h2{ /* ONLY FOR "EACH OF US, ALL OF US" */
+		font-size: 40px; /* H2 font size is always ~1/3 of H1 font size */
+	}
+
+	h3{ /* Main Headings - Sets Grotesk */
+		font-size: 32px;
+	}
+
+	h4{ /* Subheadings - Basically A Mono */
+		font-size: 20px;
+	}
+
+	p{
+		font-size: 16px;
+	}
+
+	.socials{
+		gap: 30px;
+	}
+
+	.socials a{
+		width: 54px;
+		height: 54px;
+		border-radius: 27px;
+	}
+}
