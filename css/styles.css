@@ -152,6 +152,8 @@ p{
 	left: 10%;
 }
 
+/* Footer Styles */
+
 footer{
 	background-color: var(--twilight);
 }
@@ -159,6 +161,8 @@ footer{
 footer h1, footer h2, footer h3, footer h4, footer p{
 	color: var(--cloud);
 }
+
+
 
 /* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 767px){
@@ -263,8 +267,9 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 		--2-column: 13.4765625vw;
 		--3-column: 21.6796875vw;
 		--4-column: 29.8828125vw;
-
+		--5-column: 35vw;
 		--7-column: 54.4921875vw;
+		--10-column: 72vw;
 
 		--1-gutter: 2.9296875vw;
 	}
@@ -294,13 +299,103 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 		font-size: 16px;
 	}
 
+
+
+
+
+	/* footer styles */
+
+	footer{
+		padding-bottom: 2vw;
+		padding-top: 3vw;
+		background-image: url('../images/footer-bg.svg'); 
+		background-position: center;
+		background-size: 150vw;
+		mix-blend-mode: multiply;
+	}
+
+	h4{
+		font-size: 1.5vw;
+		letter-spacing: .2vw;
+	}
+
+	p{
+		font-size: 1vw;
+	}
+	.footerHeading{
+		display: flex;
+		width: var(--10-column);
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 5vw;
+	}
+
+	.footerlogo{
+		width:var(--9-column);
+		display: flex;
+		align-items: end;
+
+	}
+
+	.footerlogo h1 {
+		width: 42.4vw;
+		font-size: 14vw;
+	}
+
+	.footerlogo h2 {
+		width: 22.2vw;
+		font-size: 4vw;
+	}
+
 	.socials{
-		gap: 30px;
+		width: var(--1-column);
+		display: block;
 	}
 
 	.socials a{
-		width: 54px;
-		height: 54px;
-		border-radius: 27px;
+		width: var(--1-column);
+		height: var(--1-column);
+		border-radius: calc(var(--1-column)/2);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.socials a:nth-last-of-type(2){
+		margin-bottom: 1vw;
+	}
+
+
+
+	.footerInfo{
+		display: flex;
+		width: var(--10-column);
+		/* background-color:brown; */
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 5vw;
+		
+	}
+	.designTeams{
+		display: flex;
+		width: var(--4-column);
+		flex-wrap: wrap;
+		margin-right: var(--1-column);
+		margin-bottom: 4vw;
+	}
+	.map{
+		width: var(--5-column);
+		height: 25vw;
+		background-color: #ecd4b3;
+		
+	}
+	
+	.teamHolder{
+		width: var(--2-column);
+	}
+
+	.smallCredits{
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1vw;
 	}
 }
