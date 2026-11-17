@@ -283,7 +283,8 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 	.map{
 		width: var(--4-column);
 		height: 56vw;
-		background-color: #ecd4b3;
+		/* background-color: #ecd4b3; */
+		background-image: url('../images/map.svg');
 		margin-bottom: 4vw;
 	}
 	.smallCredits{
@@ -465,7 +466,8 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 	.map{
 		width: var(--5-column);
 		height: 25vw;
-		background-color: #ecd4b3;
+		background-image: url('../images/map.svg');
+		/* background-color: #ecd4b3; */
 	}
 	.teamHolder{
 		width: var(--2-column);
