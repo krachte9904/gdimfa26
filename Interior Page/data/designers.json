@@ -1,0 +1,258 @@
+{
+    "0": {
+        "portrait": "bleske.webp",
+        "name": "Svea Bleske",
+        "bio": "Bio sample.",
+        "project": "En Nous is a deck of thoughtful prompt cards meant to help initiate intimate conversations for college students in long distance relationships. Prompts are split into four different categories - emotional, physical, mental, and spiritual - with some cards also containing musical elements.",
+        "brand": "En Nous",
+        "mockups": [
+            "picOne.jpg",
+            "picTwo.jpg",
+            "picThree.jpg"
+        ],
+        "website": "https://example.com",
+        "instagram": "https://google.com",
+        "linkedin": "https://apple.com"
+    },
+
+    "1": {
+        "portrait": "cerny.webp",
+        "name": "Theodore Cerny",
+        "bio": "",
+        "project": "Base Edition is a direct-to-consumer brand that combines essential cleaning products with an intuitive visual guidebook. It takes the guesswork out of household chores by packing fundamental supplies and straightforward instructions into a comprehensive starter kit, helping young adults build lasting cleaning habits.",
+        "brand": "Base Edition",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "https://example.com",
+        "linkedin": "https://example.com"
+    },
+
+    "2": {
+        "portrait": "cunningham.webp",
+        "name": "Peyton Cunningham",
+        "bio": "",
+        "project": "Cycling through ADHD hyper fixations usually leaves behind a closet full of expensive, barely-used supplies and a not so healthy dose of buyer's remorse. The Fandian is built to bridge this gap by creating an exploratory third space designed for the ADHD community and other hobby-hopping adults to test out new interests and swap out abandoned interests with one another. By turning unused materials into shared resources, it builds a guilt-free, budget-friendly community where curiosity doesn't come with a costly price tag.",
+        "brand": "The Fandian",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "3": {
+        "portrait": "evans.webp",
+        "name": "Camilla Evans",
+        "bio": "",
+        "project": "Ampara is a reproductive-health advocacy and education platform designed to help women better understand their health and navigate the healthcare system. Through accessible education, provider-finding resources, and appointment preparation, Ampara provides guidance and support throughout the healthcare journey.",
+        "brand": "AMPARA",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "4": {
+        "portrait": "hecksel.webp",
+        "name": "Tyler Hecksel",
+        "bio": "",
+        "project": "Those who deal with disabilities are five times more likely to experience mental distress than those without. Melpô-Thállian Theatre Company makes it a central focus to provide everyone a space for representation, connection and accomidations that help ease the feelings of stress and isolation that commonly plague people with disabilities. The goal of the fundraiser is to raise enough money to construct a modern theatre space that accomidates everyone from those on the stage to those in the booth to those in the audience.",
+        "brand": "Melpô-Thállian Theatre Company",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "5": {
+        "portrait": "kawleski.webp",
+        "name": "Noah Kawleski",
+        "bio": "",
+        "project": "The Neurodiversity Coalition, or NDC, is focused on helping neurodivergent college students socialize and succeed together. Through our national organization, we partner with college campuses to host events, programs, and clubs.",
+        "brand": "Neurodiversity Coalition",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "6": {
+        "portrait": "kracht.webp",
+        "name": "Emma Kracht",
+        "bio": "",
+        "project": "Altrunity is a mentorship program that connects high school students with local professionals to develop both career and life skills, build confidence, and foster individual growth. Through an encouraging campaign, designated community space, and annual award ceremony, the program creates opportunities for connection as well the recognition of the positive impact we can have on each other when we offer our time and effort.",
+        "brand": "Altrunity",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "7": {
+        "portrait": "laube.webp",
+        "name": "Brooklyn Laube",
+        "bio": "",
+        "project": "Tekni is an app designed to make learning textile crafts simple, accessible, and enjoyable. Tekni brings everything together in one place through short, easy-to-follow video lessons that guide users step by step as they build their skills. The goal is to help people spend less time searching for tutorials and more time creating.",
+        "brand": "Tekní",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "8": {
+        "portrait": "lueck.webp",
+        "name": "Melody Lueck",
+        "bio": "",
+        "project": "Reading rates among teenagers aged 13-17 have been dropping significantly in the past few years. What's Your Era? aims to raise them by making reading seem cool again to a younger audience. We are accomplishing this through a campaign that includes social media, interactive experiences, and print materials.",
+        "brand": "What's Your Era?",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "9": {
+        "portrait": "mckinley.webp",
+        "name": "Erin McKinley",
+        "bio": "",
+        "project": "Caregivers of memory care patients deal with some of the highest rates of depression, anxiety, and burnout in the medical industry.   Reminere is a company created to support caregivers taking care of their aging loved ones in memory care.  Reminere assists and encourages the caregiver through support boxes, conversation cards, and an online companion tool.",
+        "brand": "Reminere",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "10": {
+        "portrait": "millis.webp",
+        "name": "Emerson Millis",
+        "bio": "",
+        "project": "Inspired by the field of experimental archeology, each issue of Magpie magazine presents readers with reproducible DIY projects from the past alongside their historical contexts. Unlike what would be typically expected in a project of this type, mine focuses not on the publication itself, but rather on overcoming the challenges of advertising print media in the digital age.",
+        "brand": "Magpie",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "11": {
+        "portrait": "schulte.webp",
+        "name": "Grace Schulte",
+        "bio": "",
+        "project": "Workfolk is a civic nonprofit organization focused on uniting the people of Wisconsin under one common goal: better policies for working people.",
+        "brand": "Workfolk",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "12": {
+        "portrait": "siegworth.webp",
+        "name": "Millie Siegworth",
+        "bio": "",
+        "project": "Fabula is a nonprofit storytelling platform that allows anyone to share essays, articles, and poems about coming out, identity, and everyday queer life. There’s no literary gatekeeping, so every voice can be heard.",
+        "brand": "Fabula",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "13": {
+        "portrait": "thao.webp",
+        "name": "Evangeline Thao",
+        "bio": "",
+        "project": "Fruit Punch is a celebration of young, emerging artists in the Midwest with an all-in-one festival including performance, galleries, and markets and more. Our mission is to encourage young artists to keep creating.",
+        "brand": "Fruit Punch",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "14": {
+        "portrait": "wittmann.webp",
+        "name": "Olivia Wittmann",
+        "bio": "",
+        "project": "Vertex is a collaborative social network centered on fostering community within the college math experience. Students can instantly message peers in their field to discuss any current problems they’re working on, from calculating numbers to understanding abstract logic.",
+        "brand": "Vertex",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    },
+
+    "15": {
+        "portrait": "woodhull.webp",
+        "name": "Aliayah Woodhull",
+        "bio": "",
+        "project": "Reveri is a creative community space designed primarily for artists to connect, create, and collaborate on new projects. This nonprofit's core mission is to serve as an accessible ecosystem where creators can build meaningful artistic partnerships in social standing.",
+        "brand": "The Reveri",
+        "mockups": [
+            "",
+            "",
+            ""
+        ],
+        "website": "https://example.com",
+        "instagram": "",
+        "linkedin": ""
+    }
+}
+

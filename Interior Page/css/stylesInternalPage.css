@@ -1,0 +1,535 @@
+.container{
+	margin-left:auto;
+	margin-right:auto;
+	position: relative;
+}
+
+:root{
+	--sand: #ecd4b3;
+	--cloud: #f1ece1;
+	--sky-blue: #b8cfde;
+	--sunset: #f15f3b;
+	--golden-hour: #f1a044;
+	--twilight: #5d3044;
+}
+
+@font-face {
+    font-family: 'my_BasicallyAMono_Medium';
+    src: url('../fonts/BasicallyAMono-Medium.woff2') format('woff2'),
+        url('../fonts/BasicallyAMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+	background-color: var(--twilight);
+	color: var(--cloud);
+	height: 200vh;
+}
+
+
+/* H1 - ONLY FOR "COSM" TITLE */
+h1{
+	font-family: "sets-grotesk-l", system-ui, Arial;
+	font-weight: 100;
+	font-style: normal;
+	letter-spacing: 0.025em;
+
+	/* Prevents ability to highlight & hides clipped C */
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Fixes C clip-path on Safari */
+	transform: translateZ(0);
+}
+
+/* COSM C */
+h1 span{
+	/* Clips C to match identity */
+	-webkit-clip-path: polygon(100% 0%, 100% 36%, 70% 36%, 70% 64%, 100% 64%, 100% 100%, 0% 100%, 0% 0%);
+	clip-path: polygon(100% 0%, 100% 36%, 70% 36%, 70% 64%, 100% 64%, 100% 100%, 0% 100%, 0% 0%);
+	letter-spacing: 0;
+}
+
+/* H2 - ONLY FOR "Each of Us, All of Us" TITLE */
+h2{
+	font-family: "sets-grotesk-l", system-ui, Arial;
+	font-weight: 600;
+	font-style: normal;
+}
+
+/* H3 - Sets Grotesk Headings */
+h3{
+	font-family: "sets-grotesk-l", system-ui, Arial;
+	font-weight: 600;
+	font-style: normal;
+}
+
+/* H4 - Basically A Mono Subheadings */
+h4{
+	font-family: 'my_BasicallyAMono_Medium', monospace;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+/* P - Body Text */
+p{
+	font-family: 'my_BasicallyAMono_Medium', monospace;
+	letter-spacing: -0.006em;
+}
+
+h1{
+	line-height: 85%;
+}
+
+h2{
+	line-height: 100%;
+}
+
+h3{
+	line-height: 120%;
+}
+
+h4{
+	line-height: 150%;
+}
+
+p{
+	line-height: 130%;
+}
+
+
+
+
+/* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 767px){
+	.container{
+		width:87.5%; /* 280 pixels at a 320 pixel screen width (iPhone 3 / 4 / 5) */
+	}
+
+	h1{ /* ONLY FOR "COSM" */
+		font-size: 90px;
+	}
+
+	h2{ /* ONLY FOR "EACH OF US, ALL OF US" */
+		font-size: 30px; /* H2 font size is always ~1/3 of H1 font size */
+	}
+
+	h3{ /* Main Headings - Sets Grotesk */
+		font-size: 24px;
+	}
+
+	h4{ /* Subheadings - Basically A Mono */
+		font-size: 16px;
+	}
+
+	p{
+		font-size: 14px;
+	}
+
+	.header{
+		width: 100%;
+		height: 40px;
+		background-color: var(--cloud);
+		padding-top: 10px;
+		padding-bottom: 10px;
+		position: fixed;
+		top: 0;
+
+		color: var(--twilight);
+		font-family: 'my_BasicallyAMono_Medium', monospace;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		z-index: 999;
+	}
+
+	.header p{
+		display: none;
+	}
+
+	.header a{
+		text-decoration: none;
+		color: inherit;
+		display: flex;
+	}
+
+	.headerContainer{
+		display: flex;
+	}
+
+	.arrow{
+		height: 20px;
+		width: 20px;
+		/*background-color: #ccc;*/
+		/*padding-top: 10px;*/
+		background-image: url(../images/arrow.svg);
+		position: relative;
+		top: 10px;
+	}
+
+	.forward{
+		transform: scaleX(-1);
+		transition: 250ms;
+		position: relative;
+	    right: 0;
+	    transition: 100ms;
+
+	}
+
+	.back{
+		position: relative;
+	    left: 0;
+		transition: 100ms;
+	}
+
+	.backnforth:hover .back{
+		left: -10px;
+		transition: 250ms;
+	}
+
+	.backnforth:hover .forward{
+		right: -10px;
+		transition: 250ms;
+	}
+
+	.identity{
+		height: 40px;
+		width: 50%;
+		background-image: url(../images/headerID.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-left: auto;
+		margin-right: auto;
+		transition: 250ms;
+		/*background-color: #ccc;*/
+	}
+
+	.identity:hover{
+		transform: scale(0.95);
+		transition: 250ms;
+	}
+
+	.designerPortrait{
+		width: 100px;
+		height: 100px;
+		background-color: #ccc;
+	}
+
+	.content{
+		/*display: flex;*/
+		padding-top: 100px;
+		position: relative;
+		/*background-color: #999;*/
+		height: 100%;
+	}
+
+	.profileContainer{
+		display: flex;
+	}
+
+	#designerName{
+		line-height: 30px;
+	}
+
+	#designerWebsite{
+		display: none;
+		background-image: url(../images/websiteIcon.svg);
+	}
+
+	#designerWebsite:hover{
+		background-color: var(--sunset);
+	}
+
+	#designerInstagram{
+		display: none;
+		background-image: url(../images/instagramLogo.svg);
+	}
+
+	#designerInstagram:hover{
+		background-color: var(--sunset);
+	}
+
+	#designerLinkedin{
+		background-image: url(../images/linkedInLogo.svg);
+	}
+
+	#designerLinkedin:hover{
+		background-color: var(--sunset);
+	}
+
+	.profileLinks a{
+		text-decoration: none;
+		background-color: var(--cloud);
+		border-radius: 50%;
+		display: block;
+		width: 30px;
+		height: 30px;
+	}
+
+	.designerPortrait {
+		order: 1; 
+		border-radius: 50%;
+	}
+  	.profileDetails {
+  		order: 3;
+  		/*background-color: #ccc;*/
+  		justify-content: center;
+  	} 
+  	.profileLinks {
+  		order: 2;
+  		position: relative;
+  		top: 70px;
+  		left: -25px;
+  	}
+
+  	.designerMockups{
+		width: 100%;
+		/*width: 84vw;*/
+		height: 84vw;
+		background-color: var(--cloud);
+		border-radius: 50%;
+		position: absolute;
+		position: sticky;
+		top: 120px;
+		overflow: hidden;
+		position: absolute;
+		top: 24vh;
+	}
+
+	.Q1{
+		padding-top: calc(84vw + 30px);
+	}
+
+
+}
+
+
+
+/* TABLET CONTAINER ///////////// */
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+	.container{
+		/* width: 93.75%; */  /* ORIGINAL TABLET CONTAINER */
+		width: 95.5%; /* 978px of 1024px, scaled down to tablet */
+	}
+}
+
+
+
+
+
+/* DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 768px){
+	.container{
+		/*width:978px;*/
+		width:95.5%;
+	}
+
+	:root{
+		--1-column: min(5.2734375vw, 67.5px);
+		--2-column: min(13.4765625vw, 172.5px);
+		--3-column: min(21.6796875vw, 277.5px);
+		--4-column: min(29.8828125vw, 382.5px);
+		--5-column: min(38.0859375vw, 487.5px);
+		--6-column: min(46.2890625vw, 592.5px);
+		--7-column: min(54.4921875vw, 697.5px);
+		--8-column: min(62.6953125vw, 802.5px);
+		--9-column: min(70.8984375vw, 907.5px);
+		--10-column: min(79.1015625vw, 1012.5px);
+
+		--1-gutter: min(2.9296875vw, 37.5px);
+	}
+
+	h1{ /* ONLY FOR "COSM" */
+		font-size: 120px;
+	}
+
+	h2{ /* ONLY FOR "EACH OF US, ALL OF US" */
+		font-size: 40px; /* H2 font size is always ~1/3 of H1 font size */
+	}
+
+	h3{ /* Main Headings - Sets Grotesk */
+		font-size: 32px;
+	}
+
+	h4{ /* Subheadings - Basically A Mono */
+		font-size: 20px;
+	}
+
+	p{
+		font-size: 16px;
+	}
+
+	.header{
+		width: 100%;
+		height: 40px;
+		background-color: var(--cloud);
+		padding-top: 10px;
+		padding-bottom: 10px;
+		position: fixed;
+		top: 0;
+
+		color: var(--twilight);
+		font-family: 'my_BasicallyAMono_Medium', monospace;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		z-index: 999;
+	}
+
+	.header p{
+		padding-right: 10px;
+		padding-left: 10px;
+		line-height: 40px;
+		/*background-color: #ccc;*/
+	}
+
+	.header a{
+		text-decoration: none;
+		color: inherit;
+		display: flex;
+	}
+
+	.headerContainer{
+		display: flex;
+	}
+
+	.arrow{
+		height: 20px;
+		width: 20px;
+		/*background-color: #ccc;*/
+		/*padding-top: 10px;*/
+		background-image: url(../images/arrow.svg);
+		position: relative;
+		top: 10px;
+	}
+
+	.forward{
+		transform: scaleX(-1);
+		transition: 250ms;
+		position: relative;
+	    right: 0;
+	    transition: 100ms;
+
+	}
+
+	.back{
+		position: relative;
+	    left: 0;
+		transition: 100ms;
+	}
+
+	.backnforth:hover .back{
+		left: -10px;
+		transition: 250ms;
+	}
+
+	.backnforth:hover .forward{
+		right: -10px;
+		transition: 250ms;
+	}
+
+	.identity{
+		height: 40px;
+		width: 19%;
+		background-image: url(../images/headerID.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-left: auto;
+		margin-right: auto;
+		transition: 250ms;
+	}
+
+	.identity:hover{
+		transform: scale(0.95);
+		transition: 250ms;
+	}
+
+
+
+
+	.profileContainer{
+		display: flex;
+	}
+
+	.designerPortrait{
+		width: 100px;
+		height: 100px;
+		background-color: #ccc;
+	}
+
+	#designerName{
+		line-height: 30px;
+	}
+
+	#designerWebsite{
+		background-image: url(../images/websiteIcon.svg);
+	}
+
+	#designerWebsite:hover{
+		background-color: var(--sunset);
+	}
+
+	#designerInstagram{
+		background-image: url(../images/instagramLogo.svg);
+	}
+
+	#designerInstagram:hover{
+		background-color: var(--sunset);
+	}
+
+	#designerLinkedin{
+		background-image: url(../images/linkedInLogo.svg);
+	}
+
+	#designerLinkedin:hover{
+		background-color: var(--sunset);
+	}
+
+	.profileLinks a{
+		text-decoration: none;
+		background-color: var(--cloud);
+		border-radius: 50%;
+		display: block;
+		width: 30px;
+		height: 30px;
+	}
+
+	.content{
+		display: flex;
+		padding-top: 120px;
+		position: relative;
+		/*background-color: #999;*/
+		height: 100%;
+	}
+
+	#designerProject{
+		/*background-color: #999;*/
+
+	}
+
+	.designerPage{
+		width: 50%;
+		margin-right: auto;
+	}
+
+	.designerMockups{
+		width: 45vw;
+		height: 45vw;
+		background-color: var(--cloud);
+		border-radius: 50%;
+		position: absolute;
+		/*right: 0;*/
+		position: sticky;
+		top: 120px;
+		overflow: hidden;
+	}
+
+	.carousel-cell{
+		width: 45vw;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		/*background-color: var(--cloud);*/
+	}
+}
