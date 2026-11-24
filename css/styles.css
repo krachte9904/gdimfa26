@@ -289,7 +289,8 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 		width: var(--4-column);
 		height: 56vw;
 		/* background-color: #ecd4b3; */
-		background-image: url('../images/map.svg');
+		background-image: url('../images/cosm-map.svg');
+		background-size: cover;
 		margin-bottom: 4vw;
 	}
 	.smallCredits{
@@ -456,6 +457,89 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 	}
 
 
+	/* -----hero styles---------- */
+
+	.hero{
+		height: 100vh;
+	}
+
+	.showTitleHero{
+		width: var(--10-column);
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 15vw;
+	}
+	.showTitleHero h1{
+		display: block;
+		font-size: 14vw;
+		width: var(--6-column);
+	}
+	.showTitleHero h2 span{
+		position: relative;
+		width: var(--4-column);
+		left: 30vw;
+		top: .5vw;
+		display: block;
+		font-size: 5vw;
+	}
+	.showTitleHero h2 span:nth-of-type(2){
+		position: relative;
+		left: 44vw;
+		top: 2vw;
+	}
+
+	.logoMark {
+		position: absolute;
+		top: -13vw;
+    	left: 66vw;
+		width: var(--6-column);
+		height: var(--6-column);
+		background-color: var(--golden-hour);
+		border-radius: 50%;
+		border: 2px solid var(--twilight);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.logoMark img {
+		width: var(--3-column);
+		height: var(--3-column);
+		align-items: center;
+	}
+
+	.showDateTime{
+		width: var(--6-column);
+		height: var(--6-column);
+		background-color: var(--sunset);
+		border-radius: 50%;
+		border: 2px solid var(--twilight);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+/* -----about styles---------- */
+	.aboutHeading{
+		position: absolute;
+		left: -10vw;
+		top: -10vw;
+		width: var(--8-column);
+		height: var(--8-column);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background-color: var(--sky-blue);
+		border-radius: 50%;
+		border: 2px solid var(--twilight);
+	}
+	.aboutHeading h3{
+		display: block;
+		width: var(--4-column);
+	}
+
+
 /* -----footer styles---------- */
 
 	footer{
@@ -537,7 +621,8 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 	.map{
 		width: var(--5-column);
 		height: 25vw;
-		background-image: url('../images/map.svg');
+		background-image: url('../images/cosm-map.svg');
+		background-size: cover;
 		/* background-color: #ecd4b3; */
 	}
 	.teamHolder{
