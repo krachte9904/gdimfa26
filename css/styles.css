@@ -137,11 +137,44 @@ p{
 	overflow: hidden;
 }
 
+.designerButton, .logoCircle, .smallCircle{
+	border: 1px solid var(--twilight);
+	box-sizing: border-box;
+}
+
 .designerButton{
 	display: block;
 	position: relative;
 	inset: 0;
 }
+
+.designerButton:nth-of-type(2n){
+	margin-left: auto;
+}
+
+.designerGradient{
+	position: absolute;
+	inset: 0;
+}
+
+.circles{
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+}
+
+.logoCircle, .smallCircle{
+	position: absolute;
+	inset: 0;
+}
+
+/* .logoCircle{
+	left: 0;
+	top: 100%;
+} */
+
+
+/* Main Circles + Gradients - - */
 
 .designerButton:nth-of-type(4n-3){
 	background-color: var(--sand);
@@ -172,19 +205,27 @@ p{
 }
 
 
-.designerButton .logoCircle{
-	width: var(--2-column);
-	height: var(--2-column);
-	border-radius: calc(var(--2-column)/2);
-	/* background-color: var(--sunset); */
-}
+/* Other Circles - - */
 
-.designerButton .smallCircle{
-	width: var(--1-column);
-	height: var(--1-column);
-	border-radius: calc(var(--1-column)/2);
+.designerButton:nth-of-type(4n-3) .logoCircle,
+.designerButton:nth-of-type(4n) .smallCircle{
 	background-color: var(--golden-hour);
 }
+.designerButton:nth-of-type(4n) .logoCircle,
+.designerButton:nth-of-type(4n-1) .smallCircle{
+	background-color: var(--sky-blue);
+}
+.designerButton:nth-of-type(4n-2) .logoCircle,
+.designerButton:nth-of-type(4n-3) .smallCircle{
+	background-color: var(--sunset);
+}
+.designerButton:nth-of-type(4n-1) .logoCircle,
+.designerButton:nth-of-type(4n-2) .smallCircle{
+	background-color: var(--sand)
+}
+
+
+/* Designer Images + Logos - - */
 
 .designerImg{
 	overflow: visible;
@@ -193,82 +234,129 @@ p{
 	top: -15%;
 	left: 0;
 	height: 115%;
-	/* background-size: 95%;
-	background-repeat: no-repeat;
-	background-position: 75% 0%; */
-	/* background-color: rgba(0,0,0,.1); */
-	/* background-image: url("../images/bleske.webp"); */
-	/* background: url("../images/bleske.webp") 75% 0%/95% no-repeat; */
-
+	-webkit-clip-path: inset(0 round calc(var(--3-column)/2));
 	clip-path: inset(0 round calc(var(--3-column)/2));
 }
-
+ 
 .bles .designerImg{
 	background: url("../images/bleske.webp") -10% 0%/104% no-repeat;
 }
+.bles .logoCircle{
+	background: url("../images/bleske_logo.svg") center/70% no-repeat;
+}
+
 .cern .designerImg{
 	background: url("../images/cerny.webp") 50% 0%/118% no-repeat;
 }
+.cern .logoCircle{
+	background: url("../images/cerny_logo.svg") center/45% no-repeat;
+}
+
 .cunn .designerImg{
 	background: url("../images/cunningham.webp") -300% 0%/102% no-repeat;
 }
+.cunn .logoCircle{
+	background: url("../images/cunningham_logo.svg") center/80% no-repeat;
+}
+
 .evan .designerImg{
 	background: url("../images/evans.webp") -50% 0%/108% no-repeat;
 }
+.evan .logoCircle{
+	background: url("../images/evans_logo.svg") center 60%/70% no-repeat;
+}
+
 .heck .designerImg{
 	background: url("../images/hecksel.webp") 15% 0%/115% no-repeat;
 }
+.heck .logoCircle{
+	background: url("../images/hecksel_logo.svg") center 60%/50% no-repeat;
+}
+
 .kawl .designerImg{
 	background: url("../images/kawleski.webp") -280% 0%/101% no-repeat;
 }
+.kawl .logoCircle{
+	background: url("../images/kawleski_logo.svg") center/80% no-repeat;
+}
+
 .krac .designerImg{
 	background: url("../images/kracht.webp") 200% 0%/103% no-repeat;
 }
+.krac .logoCircle{
+	background: url("../images/kracht_logo.svg") center/85% no-repeat;
+}
+
 .laub .designerImg{
 	background: url("../images/laube.webp") -40% 0%/98% no-repeat;
 }
+.laub .logoCircle{
+	background: url("../images/laube_logo.svg") center/75% no-repeat;
+}
+
 .luec .designerImg{
 	background: url("../images/lueck.webp") -50% 0%/108% no-repeat;
 }
+.luec .logoCircle{
+	background: url("../images/lueck_logo.svg") 46% center/50% no-repeat;
+}
+
 .mcki .designerImg{
 	background: url("../images/mckinley.webp") -50% 0%/98% no-repeat;
 }
+.mcki .logoCircle{
+	background: url("../images/mckinley_logo.svg") center/65% no-repeat;
+}
+
 .mill .designerImg{
 	background: url("../images/millis.webp") 14% 0%/114% no-repeat;
 }
+.mill .logoCircle{
+	background: url("../images/millis_logo.svg") center/80% no-repeat;
+}
+
 .schu .designerImg{
 	background: url("../images/schulte.webp") 20% 0%/90% no-repeat;
 }
+.schu .logoCircle{
+	background: url("../images/schulte_logo.svg") center/85% no-repeat;
+}
+
 .sieg .designerImg{
 	background: url("../images/siegworth.webp") 0% 0%/95% no-repeat;
 }
+.sieg .logoCircle{
+	background: url("../images/siegworth_logo.svg") center/85% no-repeat;
+}
+
 .thao .designerImg{
 	background: url("../images/thao.webp") 50% 0%/115% no-repeat;
 }
+.thao .logoCircle{
+	background: url("../images/thao_logo.svg") center/65% no-repeat;
+}
+
 .witt .designerImg{
 	background: url("../images/wittmann.webp") -10% 0%/114% no-repeat;
 }
+.witt .logoCircle{
+	background: url("../images/wittmann_logo.svg") center/75% no-repeat;
+}
+
 .wood .designerImg{
 	background: url("../images/woodhull.webp") -20% 0%/110% no-repeat;
 }
-
-.designerGradient{
-	position: absolute;
-	inset: 0;
+.wood .logoCircle{
+	background: url("../images/woodhull_logo.svg") center/82% no-repeat;
 }
+
+
+/* Designer/Project Names - - */
 
 .designerText{
 	position: absolute;
 	bottom: calc(var(--1-gutter)/2);
 	overflow: visible;
-}
-
-.designerText h4{
-	line-height: 120%;
-}
-
-.designerButton:nth-of-type(2n){
-	margin-left: auto;
 }
 
 .designerButton:nth-of-type(2n-1) .designerText{
@@ -279,27 +367,63 @@ p{
 	text-align: right;
 }
 
-.logoCircle{
-	background-color: var(--sunset);
+.designerText h4{
+	line-height: 120%;
 }
 
-.circles{
-	position: absolute;
-	inset: 0;
+
+
+/* DESIGNER HOVER ANIMATIONS - - - - - - - - */
+
+.logoCircle{
+	top: calc(50% - var(--2-column)/2);
+	left: calc(50% - var(--2-column)/2);
+}
+.smallCircle{
+	top: calc(50% - ((var(--1-column) + var(--1-gutter))/2));
+	left: calc(50% - ((var(--1-column) + var(--1-gutter))/2));
+}
+
+
+.designerButton{
+	transition: width .6s, height .6s;
+	/* opacity: .5; */
 }
 
 .logoCircle, .smallCircle{
-	position: absolute;
-	inset: 0;
+	transition: top .6s, left .6s;
 }
 
-.circles{
-	z-index: -1;
+.designerButton:hover{
+	/* transform: scale(.95); */
+	width: calc(var(--3-column) - 15px);
+	height: calc(var(--3-column) - 15px);
+	transition: width .5s, height .5s;
 }
 
-/* .designer:nth-of-type(3n-2) .logoCircle{
-	background-color: var(--sunset);
-} */
+.designerButton:nth-of-type(2n-1):hover .logoCircle{
+	top: -15%;
+	left: 85%;
+	transition: all .5s;
+}
+.designerButton:nth-of-type(2n-1):hover .smallCircle{
+	top: -20%;
+	left: 55%;
+	transition: all .5s;
+}
+
+.designerButton:nth-of-type(2n):hover .logoCircle{
+	top: -15%;
+	left: -51%;
+	transition: all .5s;
+}
+.designerButton:nth-of-type(2n):hover .smallCircle{
+	top: -20%;
+	left: 3%;
+	transition: all .5s;
+}
+
+
 
 
 
@@ -409,7 +533,7 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer p{
 		font-size: 3.888vw;
 	}
 
-
+	/* DESIGNER LIST - - - - - - - - */
 
 	.designerButton{
 		width: var(--2-column);
@@ -426,14 +550,6 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer p{
 
 	.designerButton:nth-of-type(2n) .designerText{
 		right: calc(var(--1-column) + var(--1-gutter));
-	}
-
-	.designerImg{
-		top: -15%;
-		height: 115%;
-		background-size: 95%;
-		
-		clip-path: inset(0 round calc(var(--3-column)/2));
 	}
 
 	.designerGradient{
@@ -461,6 +577,17 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer p{
 		margin-bottom: .8vw;
 	}
 
+	.designerButton .logoCircle{
+		width: calc(var(--2-column)*2/3);
+		height: calc(var(--2-column)*2/3);
+		border-radius: calc(var(--2-column)/3);
+	}
+
+	.designerButton .smallCircle{
+		width: var(--1-column);
+		height: var(--1-column);
+		border-radius: calc(var(--1-column)/2);
+	}
 
 
 
@@ -700,7 +827,7 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer p{
 
 
 
-
+	/* DESIGNER LIST - - - - - - - - */
 
 	.designerButton{
 		margin-bottom: var(--1-column);
@@ -715,14 +842,6 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer p{
 
 	.designerButton:nth-of-type(2n) .designerText{
 		right: calc(var(--2-column) + var(--1-gutter));
-	}
-
-	.designerImg{
-		top: -15%;
-		height: 115%;
-		background-size: 95%;
-		
-		clip-path: inset(0 round calc(var(--3-column)/2));
 	}
 	
 	.designerGradient{
@@ -744,6 +863,18 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer p{
 
 	.designerText{
 		white-space: nowrap;
+	}
+
+	.logoCircle{
+		width: var(--2-column);
+		height: var(--2-column);
+		border-radius: calc(var(--2-column)/2);
+	}
+
+	.smallCircle{
+		width: calc(var(--1-column) + var(--1-gutter));
+		height: calc(var(--1-column) + var(--1-gutter));
+		border-radius: calc((var(--1-column) + var(--1-gutter))/2);
 	}
 
 
