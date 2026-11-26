@@ -5,12 +5,16 @@
 
 :root{
 	--sand: #ecd4b3;
-	--sand-rgb: 236, 212, 179;
 	--cloud: #f1ece1;
 	--sky-blue: #b8cfde;
 	--sunset: #f15f3b;
 	--golden-hour: #f1a044;
 	--twilight: #5d3044;
+
+	--sand-rgb: 236, 212, 179;
+	--sky-blue-rgb: 184, 207, 222;
+	--golden-hour-rgb: 241, 160, 68;
+	--sunset-rgb: 241, 95, 59;
 }
 
 /* Body Font (Basically A Mono) */
@@ -34,6 +38,10 @@ body{
 
 h1, h2, h3, h4, p{
 	color: var(--twilight);
+}
+
+h5{
+	color: var(--cloud);
 }
 
 
@@ -82,6 +90,13 @@ h4{
 	letter-spacing: 0.1em;
 }
 
+/* H5 - Footer Group Headings */
+h5{
+	font-family: 'my_BasicallyAMono_Medium', monospace;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
 /* P - Body Text */
 p{
 	font-family: 'my_BasicallyAMono_Medium', monospace;
@@ -97,7 +112,7 @@ h2{
 }
 
 h3{
-	line-height: 120%;
+	line-height: 110%;
 }
 
 h4{
@@ -108,12 +123,188 @@ p{
 	line-height: 130%;
 }
 
-/* Designer List - - */
+/* HERO / FEATURE AREA - - - - - - - - */
+
+
+
+/* ABOUT COSM - - - - - - - - */
+
+
+/* DESIGNER LIST - - - - - - - - */
+
+#designerList{
+	padding: 120px 0; /*TEMPORARY*/
+	overflow: hidden;
+}
+
+.designerButton{
+	display: block;
+	position: relative;
+	inset: 0;
+}
+
+.designerButton:nth-of-type(4n-3){
+	background-color: var(--sand);
+}
+.designerButton:nth-of-type(4n-3) .designerGradient{
+	background-image: linear-gradient(to top left, rgba(var(--sand-rgb), 1), rgba(var(--sand-rgb), 0.4), transparent, transparent);
+}
+
+.designerButton:nth-of-type(4n-2){
+	background-color: var(--sky-blue);
+}
+.designerButton:nth-of-type(4n-2) .designerGradient{
+	background-image: linear-gradient(to top right, rgba(var(--sky-blue-rgb), 1), rgba(var(--sky-blue-rgb), 0.4), transparent, transparent);
+}
+
+.designerButton:nth-of-type(4n-1){
+	background-color: var(--golden-hour);
+}
+.designerButton:nth-of-type(4n-1) .designerGradient{
+	background-image: linear-gradient(to top left, rgba(var(--golden-hour-rgb), 1), rgba(var(--golden-hour-rgb), 0.4), transparent, transparent);
+}
+
+.designerButton:nth-of-type(4n){
+	background-color: var(--sunset);
+}
+.designerButton:nth-of-type(4n) .designerGradient{
+	background-image: linear-gradient(to top right, rgba(var(--sunset-rgb), 1), rgba(var(--sunset-rgb), 0.4), transparent, transparent);
+}
+
+
+.designerButton .logoCircle{
+	width: var(--2-column);
+	height: var(--2-column);
+	border-radius: calc(var(--2-column)/2);
+	/* background-color: var(--sunset); */
+}
+
+.designerButton .smallCircle{
+	width: var(--1-column);
+	height: var(--1-column);
+	border-radius: calc(var(--1-column)/2);
+	background-color: var(--golden-hour);
+}
+
+.designerImg{
+	overflow: visible;
+	position: absolute;
+	inset: 0;
+	top: -15%;
+	left: 0;
+	height: 115%;
+	/* background-size: 95%;
+	background-repeat: no-repeat;
+	background-position: 75% 0%; */
+	/* background-color: rgba(0,0,0,.1); */
+	/* background-image: url("../images/bleske.webp"); */
+	/* background: url("../images/bleske.webp") 75% 0%/95% no-repeat; */
+
+	clip-path: inset(0 round calc(var(--3-column)/2));
+}
+
+.bles .designerImg{
+	background: url("../images/bleske.webp") -10% 0%/104% no-repeat;
+}
+.cern .designerImg{
+	background: url("../images/cerny.webp") 50% 0%/118% no-repeat;
+}
+.cunn .designerImg{
+	background: url("../images/cunningham.webp") -300% 0%/102% no-repeat;
+}
+.evan .designerImg{
+	background: url("../images/evans.webp") -50% 0%/108% no-repeat;
+}
+.heck .designerImg{
+	background: url("../images/hecksel.webp") 15% 0%/115% no-repeat;
+}
+.kawl .designerImg{
+	background: url("../images/kawleski.webp") -280% 0%/101% no-repeat;
+}
+.krac .designerImg{
+	background: url("../images/kracht.webp") 200% 0%/103% no-repeat;
+}
+.laub .designerImg{
+	background: url("../images/laube.webp") -40% 0%/98% no-repeat;
+}
+.luec .designerImg{
+	background: url("../images/lueck.webp") -50% 0%/108% no-repeat;
+}
+.mcki .designerImg{
+	background: url("../images/mckinley.webp") -50% 0%/98% no-repeat;
+}
+.mill .designerImg{
+	background: url("../images/millis.webp") 14% 0%/114% no-repeat;
+}
+.schu .designerImg{
+	background: url("../images/schulte.webp") 20% 0%/90% no-repeat;
+}
+.sieg .designerImg{
+	background: url("../images/siegworth.webp") 0% 0%/95% no-repeat;
+}
+.thao .designerImg{
+	background: url("../images/thao.webp") 50% 0%/115% no-repeat;
+}
+.witt .designerImg{
+	background: url("../images/wittmann.webp") -10% 0%/114% no-repeat;
+}
+.wood .designerImg{
+	background: url("../images/woodhull.webp") -20% 0%/110% no-repeat;
+}
+
+.designerGradient{
+	position: absolute;
+	inset: 0;
+}
+
+.designerText{
+	position: absolute;
+	bottom: calc(var(--1-gutter)/2);
+	overflow: visible;
+}
+
+.designerText h4{
+	line-height: 120%;
+}
+
+.designerButton:nth-of-type(2n){
+	margin-left: auto;
+}
+
+.designerButton:nth-of-type(2n-1) .designerText{
+	text-align: left;
+}
+
+.designerButton:nth-of-type(2n) .designerText{
+	text-align: right;
+}
+
+.logoCircle{
+	background-color: var(--sunset);
+}
+
+.circles{
+	position: absolute;
+	inset: 0;
+}
+
+.logoCircle, .smallCircle{
+	position: absolute;
+	inset: 0;
+}
+
+.circles{
+	z-index: -1;
+}
+
+/* .designer:nth-of-type(3n-2) .logoCircle{
+	background-color: var(--sunset);
+} */
 
 
 
 
-/* Socials - - */
+/* SOCIALS - - - - - - - - */
 
 .socials{
 	display: flex;
@@ -157,13 +348,14 @@ p{
 	left: 10%;
 }
 
-/* Footer Styles */
+
+/* FOOTER - - - - - - - - */
 
 footer{
 	background-color: var(--twilight);
 }
 
-footer h1, footer h2, footer h3, footer h4, footer p{
+footer h1, footer h2, footer h3, footer h4, footer h5, footer p{
 	color: var(--cloud);
 }
 
@@ -193,24 +385,84 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 	}
 
 	h1{ /* ONLY FOR "COSM" */
-		font-size: 90px;
+		font-size: 29vw;
 	}
 
 	h2{ /* ONLY FOR "EACH OF US, ALL OF US" */
-		font-size: 30px; /* H2 font size is always ~1/3 of H1 font size */
+		font-size: 9.7vw;
 	}
 
 	h3{ /* Main Headings - Sets Grotesk */
-		font-size: 24px;
+		/* font-size: 8.75vw; // 28px at 320px viewport */
+		font-size: 8vw; /* Only Peyton's name doesn't fit on one line */
+		/* font-size: 6.7632vw; // Everyone's names fit on one line */ 
 	}
 
 	h4{ /* Subheadings - Basically A Mono */
-		font-size: 16px;
+		/* font-size: 16px; */
+		font-size: 4.444vw;
 	}
 
 	p{
 		font-size: 14px;
+		/* font-size: 4.375vw; */
+		font-size: 3.888vw;
 	}
+
+
+
+	.designerButton{
+		width: var(--2-column);
+		height: var(--2-column);
+		border-radius: calc(var(--2-column)/2);
+
+		margin-bottom: calc(var(--2-column)*(3/4));
+		/* margin-bottom: var(--2-column); */
+	}
+
+	.designerButton:nth-of-type(2n-1) .designerText{
+		left: calc(var(--1-column) + var(--1-gutter));
+	}
+
+	.designerButton:nth-of-type(2n) .designerText{
+		right: calc(var(--1-column) + var(--1-gutter));
+	}
+
+	.designerImg{
+		top: -15%;
+		height: 115%;
+		background-size: 95%;
+		
+		clip-path: inset(0 round calc(var(--3-column)/2));
+	}
+
+	.designerGradient{
+		border-radius: calc(var(--2-column)/2);
+	}
+
+	.designerButton:nth-of-type(4n-3) .designerGradient{
+		background-image: linear-gradient(to top left, rgba(var(--sand-rgb), 1), rgba(var(--sand-rgb), 0.5), transparent, transparent);
+	}
+	.designerButton:nth-of-type(4n-2) .designerGradient{
+		background-image: linear-gradient(to top right, rgba(var(--sky-blue-rgb), 1), rgba(var(--sky-blue-rgb), 0.5), transparent, transparent);
+	}
+	.designerButton:nth-of-type(4n-1) .designerGradient{
+		background-image: linear-gradient(to top left, rgba(var(--golden-hour-rgb), 1), rgba(var(--golden-hour-rgb), 0.5), transparent, transparent);
+	}
+	.designerButton:nth-of-type(4n) .designerGradient{
+		background-image: linear-gradient(to top right, rgba(var(--sunset-rgb), 1), rgba(var(--sunset-rgb), 0.5), transparent, transparent);
+	}
+
+	.designerText{
+		width: var(--3-column);
+	}
+
+	.designerText h3{
+		margin-bottom: .8vw;
+	}
+
+
+
 
 	.socials{
 		gap: var(--1-gutter);
@@ -234,16 +486,11 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 
 /* -----footer logo styles---------- */
 	.footerlogo{
-		width:var(--4-column);
+		width: var(--4-column);
 		text-align: center;
-		margin-bottom: 4vw;
+		margin-bottom: 6vw;
 	}
-	footer h1{
-		font-size: 29vw;
-	}
-	footer h2{
-		font-size: 9vw;
-	}
+
 	.footerHeading{
 		margin-top: 20vw;
 	}
@@ -255,15 +502,17 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 		align-items: start;
 		width: var(--4-column);
 	}
-	footer h4{
-		font-size: 3vw;
-		letter-spacing: .2vw;
+	footer h5{
+		font-size: 3vw; 
+		margin-bottom: 2vw;  /* Added space between headers and names - Olivia */
 	}
 	footer p{
-		font-size: 2.5vw;
+		/* font-size: 2.5vw; */  
+		font-size: 2.777vw;  /* Made text bigger since text gets pretty small on mobile - Olivia */
 	}
 	.socialsMobile{
-		width: var(--1-column);
+		/* width: var(--1-column); */  
+		width: 13vw;  /* Made holder the same size as socials to give teams more space - Olivia */
 		display: block;
 		margin-left: auto;
 	}
@@ -280,10 +529,11 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--1-gutter);
-		margin-bottom: 4vw;
+		margin-bottom: 6vw;
 	}
 	.teamHolder{
-		width: 28.25vw;
+		/* width: 28.25vw; */
+		width: 28.9vw;  /* Made individual team width a little bigger to utilize the extra width in the overall teams holder - Olivia */
 	}
 	.map{
 		width: var(--4-column);
@@ -291,13 +541,13 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 		/* background-color: #ecd4b3; */
 		background-image: url('../images/cosm-map.svg');
 		background-size: cover;
-		margin-bottom: 4vw;
+		margin-bottom: 6vw;
 	}
 	.smallCredits{
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
-		font-size: 2vw;
+		/* font-size: 2vw; */  /* Made .smallCredits an h5 (the same styles as the team headings) - Olivia */
 	}
 	
 }
@@ -355,97 +605,6 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 		font-size: 16px;
 	}
 
-	#designerList{
-		padding: 120px 0;
-	}
-
-	.designer{
-		width: var(--3-column);
-		height: var(--3-column);
-		border-radius: calc(var(--3-column)/2);
-		background-color: rgba(var(--sand-rgb), .9);
-	}
-
-	.designer .logoCircle{
-		width: var(--2-column);
-		height: var(--2-column);
-		border-radius: calc(var(--2-column)/2);
-		/* background-color: var(--sunset); */
-	}
-
-	.designer .smallCircle{
-		width: var(--1-column);
-		height: var(--1-column);
-		border-radius: calc(var(--1-column)/2);
-		background-color: var(--golden-hour);
-	}
-
-	.designer{
-		display: block;
-		/* background-color: rgba(0, 0, 0, .1); */
-		position: relative;
-		inset: 0;
-		margin-bottom: var(--1-column);
-	}
-
-	.designer .designerImg{
-		overflow: visible;
-		background-color: rgba(0, 0, 0, .1);
-		position: absolute;
-		inset: 0;
-		bottom: 0;
-		left: 0;
-		height: 120%;
-		background-size: 80%;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-image: url("../images/bleske.webp");
-	}
-
-	.designer .designerText{
-		position: absolute;
-		bottom: calc(var(--1-gutter)/2);
-		white-space: nowrap; 
-  		overflow: visible;
-	}
-
-	.designer:nth-of-type(2n){
-		margin-left: auto;
-	}
-
-	.designer:nth-of-type(2n-1) .designerText{
-		left: calc(var(--2-column) + var(--1-gutter));
-		text-align: left;
-	}
-
-	.designer:nth-of-type(2n) .designerText{
-		right: calc(var(--2-column) + var(--1-gutter));
-		text-align: right;
-	}
-
-	.logoCircle{
-		background-color: var(--sunset);
-	}
-
-	.circles{
-		position: absolute;
-		inset: 0;
-	}
-
-	.logoCircle, .smallCircle{
-		position: absolute;
-		inset: 0;
-	}
-
-	.circles{
-		z-index: -1;
-	}
-
-	/* .designer:nth-of-type(3n-2) .logoCircle{
-		background-color: var(--sunset);
-	} */
-
-	
 	
 	
 	#about h3{
@@ -460,7 +619,7 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 	/* -----hero styles---------- */
 
 	.hero{
-		height: 100vh;
+		height: 100dvh;
 	}
 
 	.showTitleHero{
@@ -540,6 +699,58 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 	}
 
 
+
+
+
+	.designerButton{
+		margin-bottom: var(--1-column);
+		width: var(--3-column);
+		height: var(--3-column);
+		border-radius: calc(var(--3-column)/2);
+	}
+
+	.designerButton:nth-of-type(2n-1) .designerText{
+		left: calc(var(--2-column) + var(--1-gutter));
+	}
+
+	.designerButton:nth-of-type(2n) .designerText{
+		right: calc(var(--2-column) + var(--1-gutter));
+	}
+
+	.designerImg{
+		top: -15%;
+		height: 115%;
+		background-size: 95%;
+		
+		clip-path: inset(0 round calc(var(--3-column)/2));
+	}
+	
+	.designerGradient{
+		border-radius: calc(var(--3-column)/2);
+	}
+
+	.designerButton:nth-of-type(4n-3) .designerGradient{
+		background-image: linear-gradient(to top left, rgba(var(--sand-rgb), 1), rgba(var(--sand-rgb), 0.4), transparent, transparent);
+	}
+	.designerButton:nth-of-type(4n-2) .designerGradient{
+		background-image: linear-gradient(to top right, rgba(var(--sky-blue-rgb), 1), rgba(var(--sky-blue-rgb), 0.4), transparent, transparent);
+	}
+	.designerButton:nth-of-type(4n-1) .designerGradient{
+		background-image: linear-gradient(to top left, rgba(var(--golden-hour-rgb), 1), rgba(var(--golden-hour-rgb), 0.4), transparent, transparent);
+	}
+	.designerButton:nth-of-type(4n) .designerGradient{
+		background-image: linear-gradient(to top right, rgba(var(--sunset-rgb), 1), rgba(var(--sunset-rgb), 0.4), transparent, transparent);
+	}
+
+	.designerText{
+		white-space: nowrap;
+	}
+
+
+
+	
+
+
 /* -----footer styles---------- */
 
 	footer{
@@ -595,13 +806,15 @@ footer h1, footer h2, footer h3, footer h4, footer p{
 
 	/* -----footer content styles---------- */
 
-	h4{
+	footer h5{  /* Changed h4s in footers to h5 to differentiate them from the bigger h4s used elsewhere - Olivia */
 		font-size: 1.5vw;
 		letter-spacing: .2vw;
 	}
-	p{
+	
+	footer p{
 		font-size: 1vw;
 	}
+
 	.footerInfo{
 		display: flex;
 		width: var(--10-column);
